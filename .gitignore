@@ -28,7 +28,7 @@ secrets/
 # --- Java / Maven / Spring Boot ---
 target/
 build/
-out/
+!**/out/
 *.class
 *.jar
 *.war
