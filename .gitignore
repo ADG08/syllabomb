@@ -1,0 +1,61 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# --- Logs ---
+logs/
+*.log
+*.out
+*.err
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment / Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+
+# --- Java / Maven / Spring Boot ---
+target/
+build/
+!**/out/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+
+# --- Angular / Node ---
+node_modules/
+dist/
+.angular/
+.cache/
+coverage/
+.npm/
+.pnpm-store/
+
+# --- Tests / Reports ---
+test-results/
+reports/
+dependency-check-report.*
+.scannerwork/
+sonar-report.json
+
+# --- Database / Runtime artifacts ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Docker / Compose ---
+docker-data/
+*.pid
