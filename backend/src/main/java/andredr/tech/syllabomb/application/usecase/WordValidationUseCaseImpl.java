@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,7 @@ public class WordValidationUseCaseImpl implements WordValidationUseCase {
     }
 
     @Override
+    @Cacheable(value = "wordValidation", key = "#word.toLowerCase() + '-' + #syllabe.toLowerCase()")
     public boolean isValid(String word, String syllabe) {
         if(word == null || word.isBlank() || syllabe == null || syllabe.isBlank()) return false;
         String normalized = word.trim().toLowerCase();
